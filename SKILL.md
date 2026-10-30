@@ -11,6 +11,17 @@ The main session orchestrates and owns every tracker write; background agents on
 
 **Input:** ticket IDs, or "mine" = tickets in the testing status assigned to the user.
 
+## Writing style (comments and summaries)
+
+Every ticket comment, every agent's draft comment and every summary to the user follows the style file in `project.md`. Read it before writing. With no style file, use these rules:
+
+- **First line = the verdict or the next action.** "Passed QA" / "Failed QA: <what fails>" / "Blocked: <what's missing>". No intro.
+- **Numbered steps** for anything to do or reproduce. One action per step, fewest steps that work.
+- **Max 5 bullets per group.** Rank the most important first; keep the rest for when it's asked for.
+- **Plain words** in ticket comments: no code names, file paths, ids or jargon. The author gets technical detail only in a FAIL, in one short "Where" line.
+- **Summaries to the user** restate where things stand ("3 of 4 done") and end with one concrete thing they can do or decide.
+- **No preamble, no recap, no closer.** No "by the way" tangents: a side finding goes in one separate line at the end, or not at all.
+
 ## 0. Triage (main session, before any agent)
 
 For each ticket:
